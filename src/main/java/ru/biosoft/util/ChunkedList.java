@@ -10,8 +10,7 @@ import java.util.RandomAccess;
 import java.util.Map.Entry;
 
 /**
- * Unmodifiable List of Strings which can load in memory via chunks
- * @author lan
+ * Unmodifiable List of Strings which can load in memory via chunks.
  */
 public abstract class ChunkedList<T extends Comparable<? super T>> extends AbstractList<T> implements RandomAccess
 {
@@ -59,8 +58,8 @@ public abstract class ChunkedList<T extends Comparable<? super T>> extends Abstr
     }
 
     /**
-     * @param from
-     * @param to
+     * @param from  the chunk start position in this list
+     * @param to    the chunk end position in this list
      * @return array of list elements from "from" to "to" (excluding)
      */
     abstract protected T[] getChunk(int from, int to);
